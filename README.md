@@ -9,9 +9,9 @@ Currently this repo contains stubs (plan to build).
 Planned structure and files:
 
 * home
-** browser
-*** meta
-*** viewport
+  * browser
+  * meta
+  * viewport
 ** css
 *** loader.js
 *** writer.js
