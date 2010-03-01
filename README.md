@@ -10,36 +10,36 @@ Planned structure and files:
 
 * home
   * browser
-  * meta
-  * viewport
+    * meta
+    * viewport
   * css
-*** loader.js
-*** writer.js
-** dom
-*** dimension.js
-*** element.js
-*** event.js
-*** form.js
-*** position.js
-*** style.js
-*** traversal.js
-** io
-*** xhr.js
-*** xdr.js
-** lang __(fixes for legacy browsers)__
-*** array.js
-*** object.js
-*** string.js
-*** number.js
-** script
-*** loader.js
-*** writer.js
-** transition
-*** tween.js
-*** easing.js
-** util
-*** cache.js
-*** class.js
+    * loader.js
+    * writer.js
+  * dom
+    * dimension.js
+    * element.js
+    * event.js
+    * form.js
+    * position.js
+    * style.js
+    * traversal.js
+  * io
+    * xhr.js
+    * xdr.js
+  * lang __(fixes for legacy browsers)__
+    * array.js
+    * object.js
+    * string.js
+    * number.js
+  * script
+    * loader.js
+    * writer.js
+  * transition
+    * tween.js
+    * easing.js
+  * util
+    * cache.js
+    * class.js
 
 Note
 ====
