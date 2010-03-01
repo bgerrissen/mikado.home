@@ -47,6 +47,7 @@ These core files need to be very low level, no fluf or added convenience methods
 Convenience methods should reside in a higher level framework.
 
 A high level framework making use of the low level mikado.home framework could be:
+
 * cloning other framework syntax like jquery, prototype or dojo.
 * widgets/ui framework
 * abstractions
