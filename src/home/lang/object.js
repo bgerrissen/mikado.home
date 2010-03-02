@@ -3,30 +3,32 @@
  */
 mikado.module({
     
-    path: 'home.lang.object',
+    path: 'home.lang.Object',
     
     build: function(){
         
-        function empty(){}
-        
-        Object.augment = function(receiver, provider, override, remap){
-            var prop, remap = remap || {};
+        Object.augment || (Object.augment = function(receiver, provider, override){
+            if(!provider || !receiver) {
+                return receiver;
+            }
             for(var property in provider) {
-                if(provider.hasOwnProperty(property)) {
-                    if(!receiver[prop] || override) {
-                        prop = remap[property] || property;
-                        receiver[prop] = provider[property];
-                    }
+                if(!receiver[property] || override) {
+                    receiver[property] = provider[property];
                 }
             }
             return receiver;
-        }
+        });
         
-        // use #augment if more static Object methods are added.
-        Object.create = function(obj){
-            empty.prototype = obj;
-            return new empty();
-        }
+        Object.create || (Object.create = function(){
+           var a = {i:1}, b = {__proto__:a}, empty = function(){}
+           return a.i ? function(object, properties){
+               return properties ? Object.augment({__proto__:object}, properties) : {__proto__:object};
+           } : function(object, properties){
+               empty.prototype = object;
+               object = new empty();
+               return properties ? augment(object, properties) : object;
+           } 
+        }());
         
     }
     
